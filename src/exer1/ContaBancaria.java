@@ -15,12 +15,6 @@ public class ContaBancaria{
 	
 	
 //CONSTRUTORES
-	public ContaBancaria(String aTitular) {
-		titular = aTitular;
-		this.dataAbertura= new Date();
-		saldo = 0.0;
-	}
-	
 	public ContaBancaria(String aTitular, double aSaldo) {
 		titular = aTitular;
 		this.dataAbertura = new Date();
@@ -30,27 +24,39 @@ public class ContaBancaria{
 	public ContaBancaria(String aTitular, Date aDataAbertura) {
 		titular = aTitular;
 		dataAbertura = aDataAbertura;
+		saldo = 0.0;
 	}
 	
 //METODOS
 	public String getInformacaoConta() {
 		DecimalFormat decFor = new DecimalFormat("0.00");
 		String saldoDec = decFor.format(saldo);
-		SimpleDateFormat forData = new SimpleDateFormat("DD/MM/YYYY");
+		SimpleDateFormat forData = new SimpleDateFormat("dd/MM/yyyy");
 		String SDF = forData.format(dataAbertura);
-		return "A titular " + titular + " tem saldo atual de " + saldo + "€" + " e abriu a conta em " + forData;
+		
+		return "A titular " + titular + " tem saldo atual de " + saldoDec + "€" + " e abriu a conta em " + SDF;
 	}
 
 	public void depositar(double aValor) {
 		saldo = saldo + aValor;
+		
 		System.out.println("Depositou " + aValor);
 		System.out.println("Saldo depois deposito " + saldo);
 	}
-//	
+
 	public void levantar(double aValor) {
-		saldo = saldo - aValor;
-		System.out.println("Levantou " + aValor);
-		System.out.println("Saldo depois levantamento " + saldo);
+		
+		if(aValor < saldo) {
+			saldo = saldo - aValor;
+			
+			System.out.println("Levantou " + aValor);
+			System.out.println("Saldo depois levantamento " + saldo);
+		}
+		else {
+			System.out.println("Não é permitidos levantamentos. Fundos insuficientes");
+		}
+		
+		
 	}
 
 //GETTERS E SETTERS
