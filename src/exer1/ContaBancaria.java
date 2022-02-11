@@ -37,6 +37,7 @@ public class ContaBancaria{
 		DecimalFormat decFor = new DecimalFormat("0.00");
 		String saldoDec = decFor.format(saldo);
 		SimpleDateFormat forData = new SimpleDateFormat("DD/MM/YYYY");
+		String SDF = forData.format(dataAbertura);
 		return "A titular " + titular + " tem saldo atual de " + saldo + "€" + " e abriu a conta em " + forData;
 	}
 
