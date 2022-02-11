@@ -12,8 +12,8 @@ public class Main {
 		ContaBancaria conta4 = new ContaBancaria("Sara", 5000);
 		
 		conta4.depositar(10_000);
-		conta4.levantar(500.50);
-		System.out.println("A titular " + conta4.getaTitular() + " tem saldo de " + conta4.getSaldo() + conta4.dataAbertura());
+		conta4.levantar(1000);
+		System.out.println("A titular " + conta4.getaTitular() + " tem saldo de " + conta4.getSaldo() + " na data " + conta4.dataAbertura());
 		
 		
 		

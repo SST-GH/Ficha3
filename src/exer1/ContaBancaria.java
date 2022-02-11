@@ -43,13 +43,13 @@ public class ContaBancaria{
 	public void depositar(double aValor) {
 		saldo = saldo + aValor;
 		System.out.println("Depositou " + aValor);
-		System.out.println("Saldo atual " + saldo);
+		System.out.println("Saldo depois de depósito " + saldo);
 	}
 //	
 	public void levantar(double aValor) {
 		saldo = saldo - aValor;
 		System.out.println("Levantou " + aValor);
-		System.out.println("Saldo atual " + saldo);
+		System.out.println("Saldo depois de lavantamento " + saldo);
 	}
 
 //GETTERS E SETTERS
