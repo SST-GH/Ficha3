@@ -1,5 +1,7 @@
 package exer1;
 
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -30,29 +32,26 @@ public class ContaBancaria{
 		dataAbertura = aDataAbertura;
 	}
 	
-	
-
-	
 //METODOS
 	public String getInformacaoConta() {
-		return "titular: " + titular + "saldo: " + saldo;
-		
-		
-		
+		DecimalFormat decFor = new DecimalFormat("0.00");
+		String saldoDec = decFor.format(saldo);
+		SimpleDateFormat forData = new SimpleDateFormat("yyyy/MM/dd");
+		return "O titular: " + titular + "tem saldo de " + saldo;
 	}
 
-	
 	public void depositar(double aValor) {
 		saldo = saldo + aValor;
+		System.out.println("Depositou " + aValor);
+		System.out.println("Saldo atual " + saldo);
 	}
 //	
 	public void levantar(double aValor) {
 		saldo = saldo - aValor;
+		System.out.println("Levantou " + aValor);
+		System.out.println("Saldo atual " + saldo);
 	}
-	
-	
-	
-	
+
 //GETTERS E SETTERS
 	public double getSaldo() {
 		return saldo;
