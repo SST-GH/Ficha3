@@ -23,7 +23,7 @@ public class ContaBancaria{
 	
 	public ContaBancaria(String aTitular, double aSaldo) {
 		titular = aTitular;
-		this.dataAbertura= new Date();
+		this.dataAbertura = new Date();
 		saldo = aSaldo;
 	}
 	
@@ -36,20 +36,20 @@ public class ContaBancaria{
 	public String getInformacaoConta() {
 		DecimalFormat decFor = new DecimalFormat("0.00");
 		String saldoDec = decFor.format(saldo);
-		SimpleDateFormat forData = new SimpleDateFormat("yyyy/MM/dd");
-		return "O titular: " + titular + "tem saldo de " + saldo;
+		SimpleDateFormat forData = new SimpleDateFormat("DD/MM/YYYY");
+		return "A titular " + titular + " tem saldo atual de " + saldo + "€" + " e abriu a conta em " + forData;
 	}
 
 	public void depositar(double aValor) {
 		saldo = saldo + aValor;
 		System.out.println("Depositou " + aValor);
-		System.out.println("Saldo depois de depósito " + saldo);
+		System.out.println("Saldo depois deposito " + saldo);
 	}
 //	
 	public void levantar(double aValor) {
 		saldo = saldo - aValor;
 		System.out.println("Levantou " + aValor);
-		System.out.println("Saldo depois de lavantamento " + saldo);
+		System.out.println("Saldo depois levantamento " + saldo);
 	}
 
 //GETTERS E SETTERS

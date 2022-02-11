@@ -8,14 +8,16 @@ public class Main {
 		
 		ContaBancaria conta1 = new ContaBancaria("Joao");
 		ContaBancaria conta2 = new ContaBancaria("Pedro", 250);
-		ContaBancaria conta3 = new ContaBancaria("Jojo", new Date (1960, 1, 4));
+		ContaBancaria conta3 = new ContaBancaria("Jojo", new Date (1980, 1, 20));
 		ContaBancaria conta4 = new ContaBancaria("Sara", 5000);
 		
 		conta4.depositar(10_000);
 		conta4.levantar(1000);
-		System.out.println("A titular " + conta4.getaTitular() + " tem saldo de " + conta4.getSaldo() + " na data " + conta4.dataAbertura());
+		System.out.println(conta4.getInformacaoConta() + "\n");
 		
 		
+		conta3.depositar(1500);
+		System.out.println(conta3.getInformacaoConta());
 		
 		
 		
