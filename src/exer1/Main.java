@@ -11,7 +11,7 @@ public class Main {
 		ContaBancaria conta1 = new ContaBancaria("Joao", new Date ());
 		ContaBancaria conta2 = new ContaBancaria("Pedro", 250);
 		ContaBancaria conta3 = new ContaBancaria("Jojo", new Date());
-		ContaBancaria conta4 = new ContaBancaria("Sara", 5000);
+		ContaBancaria conta4 = new ContaBancaria("Sara", 5_000);
 		
 		List<ContaBancaria>contas = new ArrayList<ContaBancaria>();
 		
@@ -20,20 +20,18 @@ public class Main {
 		contas.add(conta3);
 		contas.add(conta4);
 		
-		
+		System.out.println(conta4.getInformacaoConta());
 		conta4.depositar(10_000);
-		conta4.levantar(1000);
-		System.out.println(conta4.getInformacaoConta() + "\n");
+		conta4.levantar(1_000);
+		
+		System.out.println("\n" + conta3.getInformacaoConta());
+		conta3.depositar(1_500);
+		conta3.levantar(10_000);
 		
 		
-		conta3.depositar(1500);
-		conta3.levantar(10000);
-		System.out.println(conta3.getInformacaoConta());
-		
+		Banco banco = new Banco("Rico", contas);
 		
 	
-		String ex = "wtf";
-		System.out.println(ex.stripLeading());
 		
 		
 		

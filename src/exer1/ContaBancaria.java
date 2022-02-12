@@ -7,17 +7,16 @@ import java.util.Date;
 
 public class ContaBancaria{
 	
+	
+	//ATRIBUTOS
 	private String titular;
 	private double saldo;
 	private Date dataAbertura;
-	
 
-	
-	
-//CONSTRUTORES
+	//CONSTRUTORES
 	public ContaBancaria(String aTitular, double aSaldo) {
 		titular = aTitular;
-		this.dataAbertura = new Date();
+		dataAbertura = new Date();
 		saldo = aSaldo;
 	}
 	
@@ -27,21 +26,21 @@ public class ContaBancaria{
 		saldo = 0.0;
 	}
 	
-//METODOS
+	//METODOS
 	public String getInformacaoConta() {
 		DecimalFormat decFor = new DecimalFormat("0.00");
 		String saldoDec = decFor.format(saldo);
 		SimpleDateFormat forData = new SimpleDateFormat("dd/MM/yyyy");
 		String SDF = forData.format(dataAbertura);
 		
-		return "A titular " + titular + " tem saldo atual de " + saldoDec + "Ä" + " e abriu a conta em " + SDF;
+		return "A titular " + titular + " tem saldo atual de " + "‚Ç¨" + saldoDec  + " e abriu a conta em " + SDF;
 	}
 
 	public void depositar(double aValor) {
 		saldo = saldo + aValor;
 		
 		System.out.println("Depositou " + aValor);
-		System.out.println("Saldo depois deposito " + saldo);
+		System.out.println("Saldo depois dep√≥sito " + saldo);
 	}
 
 	public void levantar(double aValor) {
@@ -53,13 +52,13 @@ public class ContaBancaria{
 			System.out.println("Saldo depois levantamento " + saldo);
 		}
 		else {
-			System.out.println("N„o È permitidos levantamentos. Fundos insuficientes");
+			System.out.println("N√£o √© permitidos levantamentos. Fundos insuficientes");
 		}
 		
 		
 	}
 
-//GETTERS E SETTERS
+	//GETTERS E SETTERS
 	public double getSaldo() {
 		return saldo;
 	}
