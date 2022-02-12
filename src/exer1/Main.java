@@ -31,8 +31,9 @@ public class Main {
 		System.out.println(conta3.getInformacaoConta());
 		
 		
-		
-		
+	
+		String ex = "wtf";
+		System.out.println(ex.stripLeading());
 		
 		
 		
