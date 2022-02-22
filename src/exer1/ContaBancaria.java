@@ -7,12 +7,13 @@ import java.util.Date;
 
 public class ContaBancaria{
 	
-	
 	//ATRIBUTOS
 	private String titular;
 	private double saldo;
 	private Date dataAbertura;
 
+	
+	
 	//CONSTRUTORES
 	public ContaBancaria(String aTitular, double aSaldo) {
 		titular = aTitular;
@@ -39,8 +40,8 @@ public class ContaBancaria{
 	public void depositar(double aValor) {
 		saldo = saldo + aValor;
 		
-		System.out.println("Depositou " + aValor);
-		System.out.println("Saldo depois depósito " + saldo);
+		System.out.println("Depositou " + aValor + "€");
+		System.out.println("Saldo depois depósito " + saldo + "€");
 	}
 
 	public void levantar(double aValor) {
@@ -48,8 +49,8 @@ public class ContaBancaria{
 		if(aValor < saldo) {
 			saldo = saldo - aValor;
 			
-			System.out.println("Levantou " + aValor);
-			System.out.println("Saldo depois levantamento " + saldo);
+			System.out.println("Levantou " + aValor + "€");
+			System.out.println("Saldo depois levantamento " + saldo + "€");
 		}
 		else {
 			System.out.println("Não é permitidos levantamentos. Fundos insuficientes");
