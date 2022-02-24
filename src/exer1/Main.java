@@ -57,20 +57,6 @@ public class Main {
 		casa3.setPrecoCusto(200_000);
 		casa3.setPrecoVenda(300_000);
 		System.out.println("\nA casa vendida na morada " + casa3.getMorada() + " tem uma percentagem de margem de lucro de " + casa3.getPercentMargemLucro() + "%");
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 	}
-
 }

@@ -6,8 +6,8 @@ import java.util.List;
 public class Banco {
 	
 	private String nome;
-	private List<ContaBancaria>contas;
-	private List<Casa>casas;
+	private static List<ContaBancaria>contas;
+	private static List<Casa>casas;
 	
 	//CONSTRUTOR
 	public Banco(String aNome) {
@@ -57,7 +57,7 @@ public class Banco {
 	}
 
 	public void setContas(List<ContaBancaria>contas) {
-		this.contas = contas;
+		Banco.contas = contas;
 	}
 
 	public List<Casa> getCasas() {
@@ -65,6 +65,6 @@ public class Banco {
 	}
 	
 	public void setCasas(List<Casa> casas) {
-		this.casas = casas;
+		Banco.casas = casas;
 	}
 }
