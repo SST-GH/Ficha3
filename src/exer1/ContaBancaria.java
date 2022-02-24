@@ -11,8 +11,6 @@ public class ContaBancaria{
 	private String titular;
 	private double saldo;
 	private Date dataAbertura;
-
-	
 	
 	//CONSTRUTORES
 	public ContaBancaria(String aTitular, double aSaldo) {
@@ -36,14 +34,14 @@ public class ContaBancaria{
 		
 		return "A titular " + titular + " tem saldo atual de " + "€" + saldoDec  + " e abriu a conta em " + SDF;
 	}
-
+	
 	public void depositar(double aValor) {
 		saldo = saldo + aValor;
 		
 		System.out.println("Depositou " + aValor + "€");
 		System.out.println("Saldo depois depósito " + saldo + "€");
 	}
-
+	
 	public void levantar(double aValor) {
 		
 		if(aValor < saldo) {
@@ -52,18 +50,17 @@ public class ContaBancaria{
 			System.out.println("Levantou " + aValor + "€");
 			System.out.println("Saldo depois levantamento " + saldo + "€");
 		}
+		
 		else {
-			System.out.println("Não é permitidos levantamentos. Fundos insuficientes");
+			System.out.println("Lamentamos, mas não é permitidos levantamentos. Fundos insuficientes");
 		}
-		
-		
 	}
-
+	
 	//GETTERS E SETTERS
 	public double getSaldo() {
 		return saldo;
 	}
-
+	
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
@@ -75,5 +72,4 @@ public class ContaBancaria{
 	public Date dataAbertura() {
 		return dataAbertura;
 	}
-	
 }

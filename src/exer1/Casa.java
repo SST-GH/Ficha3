@@ -5,8 +5,6 @@ public class Casa {
 	private String morada;
 	private double precoCusto, precoVenda;
 	
-	
-	
 	//CONTRUTORES
 	public Casa() {
 	}
@@ -14,8 +12,6 @@ public class Casa {
 	public Casa(String aMorada) {
 		morada = aMorada;
 	}
-	
-	
 	
 	//METODOS
 	public double getMargemLucro() {
@@ -25,8 +21,6 @@ public class Casa {
 	public double getPercentMargemLucro() {
 		return (getMargemLucro()/precoCusto)*100;
 	}
-	
-	
 	
 	//GETTERS E SETTERS
 	public String getMorada() {

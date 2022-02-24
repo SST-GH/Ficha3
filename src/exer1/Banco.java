@@ -9,16 +9,12 @@ public class Banco {
 	private List<ContaBancaria>contas;
 	private List<Casa>casas;
 	
-	
-	
 	//CONSTRUTOR
 	public Banco(String aNome) {
 		nome = aNome;
 		contas = new ArrayList<ContaBancaria>(100);
 		casas = new ArrayList<Casa>();
 	}
-
-	
 	
 	//METODOS
 	public void criarConta(ContaBancaria aConta) {
@@ -52,12 +48,9 @@ public class Banco {
 		for(Casa casa: casas) {
 			lucPrev = lucPrev + casa.getMargemLucro();
 		}
-		
-		return lucPrev;
+			return lucPrev;
 	}
-	
-	
-	
+
 	//GETTERS E SETTERS
 	public List<ContaBancaria> getContas() {
 		return contas;
@@ -67,4 +60,11 @@ public class Banco {
 		this.contas = contas;
 	}
 
+	public List<Casa> getCasas() {
+		return casas;
+	}
+	
+	public void setCasas(List<Casa> casas) {
+		this.casas = casas;
+	}
 }
