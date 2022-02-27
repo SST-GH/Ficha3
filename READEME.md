@@ -7,11 +7,3 @@ Na classe Casa foram criados fields(privados) morada, precoCusto e precoVenda. O
 Este projeto tem como objetivo criar contas em que os titulares podem depositar e levantar montantes monetários e ainda indica informações sobre o titular, como data de abertura da conta, saldo e demais. O programa não permite ao titular de uma conta levantar um montante superior ao do seu saldo.
 
 Em relação à casa, o programa permite calcular a margem de lucro da venda de uma casa, tanto em unidades monetárias, como em percentagem.
-
-
-
-
-
-
-
-
