@@ -40,27 +40,26 @@ public class Main {
 		System.out.println("\n" + conta6.getInformacaoConta());
 		conta6.depositar(400);
 		conta6.levantar(700);
-
+		
 		var casa1 = new Casa("Rua do Funchal");
-		banco.adicionarCasa(casa1);
-		casa1.setPrecoCusto(1_500_000);
-		casa1.setPrecoVenda(2_000_000);
-		
-		System.out.println("\nA casa vendida na morada " + casa1.getMorada() + " tem uma margem de lucro de " + 
-		casa1.getMargemLucro() + "€" + ", essa margem em termos percentuais é de " + casa1.getPercentMargemLucro() + "%");
-		
 		var casa2 = new Casa("Avenida da Liberdade");
-		banco.adicionarCasa(casa2);
-		casa2.setPrecoCusto(700_000);
-		casa2.setPrecoVenda(500_000);
-		System.out.println("\nA casa vendida na morada " + casa2.getMorada() + " tem uma percentagem de margem de lucro de " +
-		casa2.getPercentMargemLucro() + "%");
-	
 		var casa3 = new Casa("Caminho do Porto");
+		
+		List<Casa>casas = new ArrayList<Casa>();
+		
+		casas.add(casa1);
+		casas.add(casa2);
+		casas.add(casa3);
+		
+		banco.adicionarCasa(casa1);
+		banco.adicionarCasa(casa2);
 		banco.adicionarCasa(casa3);
 		
-		
+		casa2.setPrecoCusto(700_000);
+		casa2.setPrecoVenda(500_000);
+		System.out.println("\nA casa vendida na morada " + casa2.getMorada() + " tem uma percentagem na margem de lucro " +
+		casa2.getPercentMargemLucro() + "%");
+	
 		banco.retirarCasa("Avenida da Liberdade");
-		
 	}
 }
