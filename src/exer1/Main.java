@@ -57,7 +57,8 @@ public class Main {
 		
 		casa2.setPrecoCusto(700_000);
 		casa2.setPrecoVenda(500_000);
-		System.out.println("\nA casa vendida na morada " + casa2.getMorada() + " tem uma percentagem na margem de lucro " +
+		System.out.println("\nA casa vendida na morada " + 
+		casa2.getMorada() + " tem uma percentagem na margem de lucro " +
 		casa2.getPercentMargemLucro() + "%");
 	
 		banco.retirarCasa("Avenida da Liberdade");
