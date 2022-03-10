@@ -11,6 +11,4 @@ Este projeto tem como objetivo criar contas em que os titulares podem depositar 
 
 Em relação à casa, o programa permite calcular a margem de lucro da venda de uma casa, tanto em unidades monetárias, como em percentagem.
 
-
-
-
+![diagramaficha3 drawio](https://user-images.githubusercontent.com/97111715/157749086-51cd8773-6516-48be-ac30-42f59466252f.png)
